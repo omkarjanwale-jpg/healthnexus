@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthNexus - Hackathon Project Presentation Poster</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @media print {
+      body { background: white !important; color: black !important; }
+      .no-print { display: none !important; }
+      .print-shadow-none { box-shadow: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans p-4 sm:p-8">
+
+  <!-- Printable Action Bar -->
+  <div class="max-w-5xl mx-auto mb-6 flex items-center justify-between no-print bg-slate-900 border border-slate-800 p-4 rounded-2xl shadow-xl">
+    <div class="flex items-center gap-3">
+      <span class="h-3 w-3 rounded-full bg-emerald-400 animate-ping"></span>
+      <span class="text-sm font-bold text-white tracking-wide">HealthNexus Official Hackathon Submission Poster</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <button onclick="window.print()" class="bg-brand-600 hover:bg-brand-500 text-white font-bold text-xs px-4 py-2 rounded-xl transition flex items-center gap-2">
+        <i class="fa-solid fa-print"></i> Print / Save as PDF
+      </button>
+      <a href="/images/mediconnect_final_poster.jpg" download="HealthNexus_Project_Poster.jpg" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-xs px-4 py-2 rounded-xl transition flex items-center gap-2">
+        <i class="fa-solid fa-download"></i> Download JPG Poster
+      </a>
+    </div>
+  </div>
+
+  <!-- Poster Container (A3 / A4 Proportions) -->
+  <div class="max-w-5xl mx-auto bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-8">
+    
+    <!-- Top Header -->
+    <header class="border-b border-slate-800 pb-6 flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div class="space-y-2">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 border border-teal-500/20 text-xs font-semibold uppercase tracking-wider">
+          <i class="fa-solid fa-staff-snake"></i> HealthTech Innovation MVP &middot; India Edition
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+          Health<span class="text-teal-400">Nexus</span>
+        </h1>
+        <p class="text-slate-400 text-sm sm:text-base max-w-2xl">
+          Unified Outpatient Appointment Booking, Real-Time Queue Triage, 108 Emergency Ambulance Dispatch, & Regional Blood Bank Inventory System.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3 text-xs font-mono">
+        <div class="bg-slate-800/80 border border-slate-700 p-3 rounded-xl">
+          <span class="text-slate-400 block text-[10px]">STACK</span>
+          <strong class="text-emerald-400">Node.js 20 &bull; Express &bull; SQLite3</strong>
+        </div>
+        <div class="bg-slate-800/80 border border-slate-700 p-3 rounded-xl">
+          <span class="text-slate-400 block text-[10px]">DEPLOYMENT</span>
+          <strong class="text-sky-400">Google Cloud Run (Alpine)</strong>
+        </div>
+      </div>
+    </header>
+
+    <!-- Visual Infographic Poster Image -->
+    <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-2xl flex justify-center bg-slate-950">
+      <img src="/images/mediconnect_final_poster.jpg" alt="HealthNexus Project Poster" class="w-full max-h-[850px] object-contain rounded-2xl">
+    </div>
+
+    <!-- The Healthcare Problem vs HealthNexus Solution -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+      <!-- Problem -->
+      <div class="bg-rose-950/20 border border-rose-900/40 p-6 rounded-2xl space-y-3">
+        <h3 class="text-rose-400 font-bold text-sm uppercase tracking-wider flex items-center gap-2">
+          <i class="fa-solid fa-triangle-exclamation"></i> Healthcare Delivery Crises
+        </h3>
+        <ul class="text-xs text-slate-300 space-y-2">
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-xmark text-rose-500 mt-0.5"></i>
+            <span><strong>OPD Waiting Room Chaos:</strong> 2–4 hour queue congestion with zero real-time visibility into doctor availability or consultation tokens.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-xmark text-rose-500 mt-0.5"></i>
+            <span><strong>Disconnected Emergency Transit:</strong> Disconnect between 108/102 callers, paramedics, and hospital ER triage desks causes fatal delays.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-xmark text-rose-500 mt-0.5"></i>
+            <span><strong>Opaque Blood Inventory:</strong> Surgical suites waste vital minutes manually calling external blood banks for rare PRBC units and platelets.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Solution -->
+      <div class="bg-teal-950/20 border border-teal-900/40 p-6 rounded-2xl space-y-3">
+        <h3 class="text-teal-400 font-bold text-sm uppercase tracking-wider flex items-center gap-2">
+          <i class="fa-solid fa-circle-check"></i> HealthNexus 5-Pillar Architecture
+        </h3>
+        <ul class="text-xs text-slate-300 space-y-2">
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-check text-teal-400 mt-0.5"></i>
+            <span><strong>1. Specialist Appointment Booking:</strong> Guaranteed tokens (<code>Q-01</code>) & INR consultation fees across 8 clinical departments.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-check text-teal-400 mt-0.5"></i>
+            <span><strong>2. Live Queue & Patient Triage:</strong> Real-time ticket tracking, priority elderly/pediatric tags, and receptionist walk-in entry.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-check text-teal-400 mt-0.5"></i>
+            <span><strong>3. 108/102 Emergency Ambulance SOS:</strong> Automated ALS/BLS fleet dispatch with driver contacts, telemetry, and 5-stage transit radar.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-check text-teal-400 mt-0.5"></i>
+            <span><strong>4. Regional Blood Bank Index:</strong> Real-time cryogenic vault inventory across all 8 blood groups with low-stock warnings (&le; 5 units).</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-check text-teal-400 mt-0.5"></i>
+            <span><strong>5. Hospital Command Center:</strong> Central admin triage manifest, stock adjustment, and emergency surgical blood requisition pipeline.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Meta -->
+    <footer class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+      <div class="flex items-center gap-2">
+        <span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
+        <span>Built for Production & Cloud Run &middot; Strict Non-Diagnostic Operational Guardrail Compliance</span>
+      </div>
+      <div>
+        <span>HealthNexus Healthcare Systems &middot; India Edition</span>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
